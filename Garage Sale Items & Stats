@@ -38,8 +38,8 @@ SELECT home_section, COUNT(*) AS item_count FROM garage_sale
 GROUP BY home_section 
 ORDER BY 2 desc;
 
--- What are the 3 most common colors across these 15 items?
+-- What are the 4 most common colors across these 15 items?
 SELECT item_color, COUNT(*) AS item_count FROM garage_sale 
 GROUP BY item_color 
 ORDER BY 2 desc 
-LIMIT 3;
+LIMIT 4;
