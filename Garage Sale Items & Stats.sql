@@ -7,7 +7,8 @@ CREATE TABLE garage_sale (
     item_color TEXT,
     home_section TEXT,
     item_price REAL,
-    item_condition TEXT);
+    item_condition TEXT
+);
 
 INSERT INTO garage_sale (item_name, item_brand, item_color, home_section, item_price, item_condition) VALUES
     ("writing desk", "furinno", "white", "home office", 19.99, "good"),
