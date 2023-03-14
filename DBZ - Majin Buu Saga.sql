@@ -69,7 +69,7 @@ FROM dbz_zfighters AS zf
   ORDER BY 5 DESC, 3 DESC
 
 -- Why did we use an INNER JOIN above? Could we have used a LEFT JOIN or RIGHT JOIN?
-Because we are looking at 'Battles in the Saga', we want to make sure that we query a 
+/* Because we are looking at 'Battles in the Saga', we want to make sure that we query a 
 table that only displays the names of 'Z Fighters' that have a matching ID in the villains 
 table (Table 2). Would we have used a LEFT JOIN, we would have queried 'Krillin' with NULL 
-values in the subsequent columns, given that Krillin did not participate in any battles. 
+values in the subsequent columns, given that Krillin did not participate in any battles. */
