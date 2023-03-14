@@ -1,4 +1,3 @@
-```sql
 -- I perfomed the following analysis on the 'NASA Astronauts, 1959-Present' dataset from Kaggle
 Link to Dataset in Kaggle: https://www.kaggle.com/nasa/astronaut-yearbook
 Table source: https://gist.github.com/pamelafox/b98e03caca7d1ec14394a90ec1512cff
@@ -33,4 +32,3 @@ ORDER BY 2 DESC
 -- What was the average number of hours spent doing spacewalks for those Astronauts who managed to do it at least once?
 SELECT AVG(space_walks_hr) FROM astronauts
 WHERE space_walks > 0;
-```
