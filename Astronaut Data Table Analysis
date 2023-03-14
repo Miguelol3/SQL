@@ -3,10 +3,8 @@ Link to Dataset in Kaggle: https://www.kaggle.com/nasa/astronaut-yearbook
 Table source: https://gist.github.com/pamelafox/b98e03caca7d1ec14394a90ec1512cff
 
 -- Let's look at the gender distribution
-```
 SELECT gender, count(*) FROM astronauts
 GROUP BY gender;
-```
 
 -- In terms of education and military rank, what does it 'take' to be an Astronaut?
 SELECT 
