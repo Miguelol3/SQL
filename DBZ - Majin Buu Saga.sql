@@ -62,11 +62,10 @@ SELECT
   ,(zf.base_ki * t.ki_multiplier) AS 'Z Fighter Max Ki'
   ,v.villain_name AS 'Villain Name'
   ,v.base_villain_ki AS 'Villain Base Ki'
-
 FROM dbz_zfighters AS zf
-  INNER JOIN dbz_villains AS v ON zf.id = v.zfighter_id
-  INNER JOIN transformations AS t ON v.transformation_id = t.id
-  ORDER BY 5 DESC, 3 DESC
+INNER JOIN dbz_villains AS v ON zf.id = v.zfighter_id
+INNER JOIN transformations AS t ON v.transformation_id = t.id
+ORDER BY 5 DESC, 3 DESC
 
 -- Why did we use an INNER JOIN above? Could we have used a LEFT JOIN or RIGHT JOIN?
 /* Because we are looking at 'Battles in the Saga', we want to make sure that we query a 
