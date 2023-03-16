@@ -1,7 +1,7 @@
 -- For this project, I queried a database that contains 6 tables with information on (1) customers and (2-6) monthly sales from January to May.
 -- The tables contained blank/incorrect/messy data for some columns, and for this reason most queries filter them out.
 
-#1. How many orders were placed in January? 
+#1 - How many orders were placed in January? 
 SELECT COUNT(orderID) FROM bit_db.JanSales
 WHERE LENGTH(orderID) = 6 
 AND orderID <> 'Order ID';
