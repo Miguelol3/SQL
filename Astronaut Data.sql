@@ -1,6 +1,6 @@
 -- I perfomed the following analysis on the 'NASA Astronauts, 1959-Present' dataset from Kaggle.
 -- Link to Dataset in Kaggle: https://www.kaggle.com/nasa/astronaut-yearbook
--- Table source: https://gist.github.com/pamelafox/b98e03caca7d1ec14394a90ec1512cff */
+-- Table source: https://gist.github.com/pamelafox/b98e03caca7d1ec14394a90ec1512cff
 
 #1 - Let's look at the gender distribution
 SELECT gender, COUNT(*) FROM astronauts
