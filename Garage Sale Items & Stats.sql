@@ -27,19 +27,19 @@ INSERT INTO garage_sale (item_name, item_brand, item_color, home_section, item_p
     ("coffee table", "IKEA", "dark oak", "common room", 9.99, "good"),
     ("pressure cooker", "ninja", "silver", "kitchen", 94.99, "good");  
 
--- Display items for sale ordered by largest price.
+#1 - Display items for sale ordered by largest price.
 SELECT * FROM garage_sale 
 ORDER BY item_price DESC;
 
--- What is the average price of the items for sale?
+#2 - What is the average price of the items for sale?
 SELECT ROUND(AVG(item_price), 2) AS avg_item_price FROM garage_sale;
 
--- How many items are being sold per category?
+#3 - How many items are being sold per category?
 SELECT home_section, COUNT(*) AS item_count FROM garage_sale 
 GROUP BY home_section 
 ORDER BY 2 DESC;
 
--- What are the 4 most common colors across these 15 items?
+#4 - What are the 4 most common colors across these 15 items?
 SELECT item_color, COUNT(*) AS item_count FROM garage_sale 
 GROUP BY item_color 
 ORDER BY 2 DESC 
