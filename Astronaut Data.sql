@@ -6,6 +6,7 @@
 SELECT gender, COUNT(*) FROM astronauts
 GROUP BY gender;
 
+
 #2 - In terms of education and military rank, what does it 'take' to be an Astronaut?
 SELECT 
 CASE
@@ -19,15 +20,18 @@ FROM astronauts
 GROUP BY rank_and_education
 ORDER BY 2 desc;
 
+
 #3 - I want to know which Astronauts were part of the series of Apollo missions...
 SELECT name, missions FROM astronauts
 WHERE missions LIKE '%Apollo%';
+
 
 #4 - Which institutions can claim to be the Alma Mater for at least 4 Astronauts?
 SELECT alma_mater, COUNT(*) FROM astronauts
 GROUP BY alma_mater
 HAVING COUNT(*) >= 4
 ORDER BY 2 DESC
+
 
 #5 -  What was the average number of hours spent doing spacewalks for those Astronauts who managed to do it at least once?
 SELECT AVG(space_walks_hr) FROM astronauts
