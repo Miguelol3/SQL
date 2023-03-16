@@ -27,7 +27,7 @@ INSERT INTO garage_sale (item_name, item_brand, item_color, home_section, item_p
     ("coffee table", "IKEA", "dark oak", "common room", 9.99, "good"),
     ("pressure cooker", "ninja", "silver", "kitchen", 94.99, "good");  
 
-#1 - Display items for sale ordered by largest price.
+-- #1 - Display items for sale ordered by largest price.
 SELECT * FROM garage_sale 
 ORDER BY item_price DESC;
 
