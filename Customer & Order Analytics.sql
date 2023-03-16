@@ -29,7 +29,7 @@ SELECT product, ROUND((SUM(quantity)*price), 2) AS 'Product Revenue'
 FROM bit_db.JanSales
 WHERE price <> 'Price Each' AND price <> '' AND product <> 'Product'
 GROUP BY 1
-ORDER BY 3 DESC;
+ORDER BY 2 DESC;
 
 #6 - Which products were sold in February at 548 Lincoln St, Seattle, WA 98101, how many of each were sold, and what was the total revenue?
 SELECT 
