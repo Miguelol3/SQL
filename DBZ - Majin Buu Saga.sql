@@ -65,7 +65,7 @@ SELECT
 FROM dbz_zfighters AS zf
 INNER JOIN dbz_villains AS v ON zf.id = v.zfighter_id
 INNER JOIN transformations AS t ON v.transformation_id = t.id
-ORDER BY 5 DESC, 3 DESC
+ORDER BY 5 DESC, 3 DESC;
 
 -- Why did we use an INNER JOIN above? Could we have used a LEFT JOIN or RIGHT JOIN?
 /* Because we are looking at 'Battles in the Saga', we want to make sure that we query a 
