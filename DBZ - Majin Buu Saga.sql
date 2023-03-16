@@ -17,6 +17,7 @@ INSERT INTO dbz_zfighters (id, name, race, base_ki) VALUES
     (6, 'Piccolo', 'Namekian', 2000),
     (7, 'Vegito', 'Saiyan', 4500000);
 
+
 -- Table 2: information about the villains. This table contains a column named 'zfighter_id' indicating the 'Z Fighter' that each villain fought
 CREATE TABLE dbz_villains (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -39,6 +40,7 @@ INSERT INTO dbz_villains (villain_name, villain_race, base_villain_ki, zfighter_
     ('Super Buu, Gohan Absorbed', 'Bubble Gum', 2700000, 7, 2),
     ('Kid Buu', 'Bubble Gum', 150000, 2, 3),
     ('Kid Buu', 'Bubble Gum', 150000, 1, 4);
+    
     
 -- Table 3: information about the different 'transformations' that the 'Z Fighters can take'
 CREATE TABLE transformations (
