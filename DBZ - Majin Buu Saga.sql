@@ -55,7 +55,7 @@ INSERT INTO transformations (level, ki_multiplier) VALUES
     ('Mystic', 30000);
     
 
--- What were the major battles that took place throughout the Majin Buu Saga?
+#1 - What were the major battles that took place throughout the Majin Buu Saga?
 SELECT
   zf.name AS 'Name'
   ,t.level AS 'Transformation'
