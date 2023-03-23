@@ -43,6 +43,7 @@ WHERE danceability > (SELECT AVG(danceability) FROM spotifydata)
 AND energy > (SELECT AVG(energy) FROM spotifydata)
 ORDER BY 3 DESC;
 
+
 #3. Okay, I made the list - how many hours of music did I end up with?
 WITH main AS (
 SELECT * FROM spotifydata 
