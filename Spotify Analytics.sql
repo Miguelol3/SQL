@@ -27,7 +27,7 @@ CREATE TABLE Master_DB.Spotifydata (
 #1. Which 3 artists were the most 'successful' in 2021?
 SELECT artist_name, COUNT(*) FROM spotifydata
 GROUP BY artist_name
-ORDER BY 2 desc
+ORDER BY 2 DESC
 LIMIT 3;
 
 
