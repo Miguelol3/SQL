@@ -3,7 +3,7 @@
 -- I started by creating a table and then inserted the data into it via the import tool in SQLiteStudio.
 
 -- Table Creation:
-CREATE TABLE Master_DB.Spotifydata (
+CREATE TABLE master_db.Spotifydata (
   id INTEGER PRIMARY KEY,
   artist_name VARCHAR NOT NULL,
   track_name VARCHAR NOT NULL,
