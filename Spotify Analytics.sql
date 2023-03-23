@@ -55,4 +55,4 @@ SELECT
 SUM (duration_ms) / 60000 AS minutes
 FROM main
 
-/* It seems like we can only have a pregame, not a full on party :( */
+/* Only 59 minutes! It seems like we can only have a pregame, not a full on party :( */
