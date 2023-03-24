@@ -45,15 +45,9 @@ ORDER BY 3 DESC;
 
 
 #3 - Okay, I made the list - how many hours of music did I end up with?
-WITH main AS (
-SELECT * FROM spotifydata 
+SELECT SUM (duration_ms) / 60000 AS minutes FROM spotifydata
 WHERE danceability > (SELECT AVG(danceability) FROM spotifydata)
 AND energy > (SELECT AVG(energy) FROM spotifydata)
-)
-
-SELECT 
-SUM (duration_ms) / 60000 AS minutes
-FROM main
 /* Only 59 minutes! It seems like we can only have a pregame, not a full on party :( */
 
 
