@@ -14,8 +14,8 @@ CASE
     WHEN military_rank IS NOT NULL AND (undergraduate_major IS NULL AND graduate_major IS NULL) then 'Ranked Officer, No Degree'
     WHEN military_rank IS NULL AND (undergraduate_major IS NOT NULL OR graduate_major IS NOT NULL) then 'Not an Officer, Degree Obtained'
     ELSE 'Not an Officer, No Degree'
-END AS rank_and_education,
-COUNT(*)
+END AS rank_and_education
+,COUNT(*)
 FROM astronauts
 GROUP BY rank_and_education
 ORDER BY 2 desc;
