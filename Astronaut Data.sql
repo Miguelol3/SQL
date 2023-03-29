@@ -2,12 +2,12 @@
 -- Link to Dataset in Kaggle: https://www.kaggle.com/nasa/astronaut-yearbook
 -- Table source: https://gist.github.com/pamelafox/b98e03caca7d1ec14394a90ec1512cff
 
-#1 - Let's look at the gender distribution
+-- #1. Let's look at the gender distribution
 SELECT gender, COUNT(*) FROM astronauts
 GROUP BY gender;
 
 
-#2 - In terms of education and military rank, what does it 'take' to be an Astronaut?
+-- #2. In terms of education and military rank, what does it 'take' to be an Astronaut?
 SELECT 
 CASE
     WHEN military_rank IS NOT NULL AND (undergraduate_major IS NOT NULL OR graduate_major IS NOT NULL) then 'Ranked Officer, Degree Obtained'
@@ -21,18 +21,18 @@ GROUP BY rank_and_education
 ORDER BY 2 desc;
 
 
-#3 - I want to know which Astronauts were part of the series of Apollo missions...
+-- #3. I want to know which Astronauts were part of the series of Apollo missions...
 SELECT name, missions FROM astronauts
 WHERE missions LIKE '%Apollo%';
 
 
-#4 - Which institutions can claim to be the Alma Mater for at least 4 Astronauts?
+-- #4. Which institutions can claim to be the Alma Mater for at least 4 Astronauts?
 SELECT alma_mater, COUNT(*) FROM astronauts
 GROUP BY alma_mater
 HAVING COUNT(*) >= 4
 ORDER BY 2 DESC
 
 
-#5 -  What was the average number of hours spent doing spacewalks for those Astronauts who managed to do it at least once?
+-- #5. What was the average number of hours spent doing spacewalks for those Astronauts who managed to do it at least once?
 SELECT AVG(space_walks_hr) FROM astronauts
 WHERE space_walks > 0;
