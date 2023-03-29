@@ -1,7 +1,7 @@
 -- For this project, I was exploring a database containing 11 tables with information on invoices, customers, employees and music.
--- The database is titled chinook, and it is part of the [Break Into Tech Data Analytics Certificate](https://howtobreakintotech.com/data-analytics-certificate-program/)
+-- The database is titled chinook, and it is part of the 'Break Into Tech Data Analytics Certificate'
 
-#1 - Let's look at the quantity of invoices and total amount spent by country
+-- #1. Let's look at the quantity of invoices and total amount spent by country
 SELECT billingcountry, COUNT(*), ROUND(SUM(total), 2) AS 'Total' FROM chinook.invoices 
 GROUP BY 1
 ORDER BY 3 DESC;
