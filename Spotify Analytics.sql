@@ -24,14 +24,14 @@ CREATE TABLE master_db.Spotifydata (
   time_signature INTEGER NOT NULL);
   
 
-#1 - Which 3 artists were the most 'successful' in 2021?
+-- #1. Which 3 artists were the most 'successful' in 2021?
 SELECT artist_name, COUNT(*) FROM spotifydata
 GROUP BY artist_name
 ORDER BY 2 DESC
 LIMIT 3;
 
 
-#2 - I feel like throwing a small gathering, which songs performed better than average in terms of danceability and energy?
+-- #2. I feel like throwing a small gathering, which songs performed better than average in terms of danceability and energy?
 SELECT
 artist_name
 ,track_name
@@ -44,14 +44,14 @@ AND energy > (SELECT AVG(energy) FROM spotifydata)
 ORDER BY 3 DESC;
 
 
-#3 - Okay, I made the list - how many hours of music did I end up with?
+-- #3. Okay, I made the list - how many hours of music did I end up with?
 SELECT SUM (duration_ms) / 60000 AS minutes FROM spotifydata
 WHERE danceability > (SELECT AVG(danceability) FROM spotifydata)
 AND energy > (SELECT AVG(energy) FROM spotifydata)
 /* Only 59 minutes! It seems like we can only have a pregame, not a full on party :( */
 
 
-#4 - Calculate the average popularity by artist, and then assign those who have an average above 90 as a 'Top Star'
+-- #4. Calculate the average popularity by artist, and then assign those who have an average above 90 as a 'Top Star'
 WITH pop_calc AS (
 SELECT artist_name, avg(popularity) AS avg_pop FROM spotifydata
 GROUP BY 1)
